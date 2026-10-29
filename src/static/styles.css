@@ -94,17 +94,40 @@ section h3 {
 
 .participants-list li {
   position: relative;
-  padding: 4px 0 4px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
   font-size: 14px;
   color: #333;
 }
 
-.participants-list li::before {
-  content: "\2022";
-  position: absolute;
-  left: 4px;
-  color: #1a237e;
-  font-weight: bold;
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.delete-participant {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #c62828;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.delete-participant:hover {
+  background-color: #ffebee;
+  color: #b71c1c;
 }
 
 .no-participants {
